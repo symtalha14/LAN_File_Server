@@ -3,8 +3,10 @@ import { useEffect, useState } from "react";
 export const MyFiles = () => {
     const [my_files, setMyFiles] = useState([]);
     const [isLoading, setLoader] = useState(true);
+    const SERVER_PORT = 3000;
+    const IP_ADDRESS = "<ENTER YOUR NETWORK IP ADDRESS HERE>"
     const myfiles = () => {
-        var files = fetch("http://192.168.0.155:3003/files");
+        var files = fetch(IP_ADDRESS+":"+SERVER_PORT+"/files");
         files.then(data => {
             data.json()
                 .then(items => {

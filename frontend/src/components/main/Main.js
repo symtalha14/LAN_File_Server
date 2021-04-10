@@ -1,8 +1,10 @@
 import { Button } from "../button/Button";
 import { useState } from "react";
+import { MyFiles } from "../myfiles/MyFiles";
 
 export default function Main() {
     const [uploading, setUpload] = useState(false);
+    
     return (
         <>
     
